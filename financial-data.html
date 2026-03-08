@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternative Financial Data | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="data-catalog.html" class="hover:text-blue-600 transition">Data Catalog</a>
+            <a href="solutions-quant-finance.html" class="hover:text-blue-600 transition">Quant Finance</a>
+            <a href="data-provenance.html" class="hover:text-blue-600 transition">Compliance</a>
+            <a href="contact.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-md hover:bg-slate-800 transition">Contact Sales</a>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-24 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-sm font-bold text-yellow-400 uppercase tracking-widest mb-4">Vertical: Quantitative Research</div>
+            <h1 class="text-5xl font-extrabold mb-6">Alternative Alpha Generation</h1>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto">Discover unconventional market signals. From B2B hiring trends to biotech clinical trial momentum, our data pipelines feed directly into modern equity and prop models.</p>
+        </div>
+    </header>
+
+    <section class="max-w-5xl mx-auto py-16 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div class="bg-white p-8 rounded-xl shadow border border-slate-200">
+                <h2 class="text-2xl font-bold mb-4">Available Signal Types</h2>
+                <div class="space-y-4">
+                    <div class="border-b border-slate-100 pb-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Clinical Trial Catalysts</h4>
+                        <p class="text-slate-500 text-xs mt-1">Phase 2/3 initiation & readout signals correlated with biotech equity movements. Daily delivery.</p>
+                    </div>
+                    <div class="border-b border-slate-100 pb-4">
+                        <h4 class="font-bold text-slate-800 text-sm">Hiring Velocity Signals</h4>
+                        <p class="text-slate-500 text-xs mt-1">Aggregate job posting data by company and function. Leading indicator of revenue acceleration by 60–90 days.</p>
+                    </div>
+                    <div class="border-b border-slate-100 pb-4">
+                        <h4 class="font-bold text-slate-800 text-sm">B2B Sales Cycle Intelligence</h4>
+                        <p class="text-slate-500 text-xs mt-1">Intent data derived from firmographic shifts, LinkedIn headcount changes, and tech-stack adoption patterns.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-sm">Sports Market Signals</h4>
+                        <p class="text-slate-500 text-xs mt-1">Prop probability deltas for systematic betting strategies. Sub-50ms API for live market-making.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-6">Macro & Micro Indicators</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">We provide structured alternative data that correlates with large market movements. Whether you are building long-term factor models or high-frequency prop strategies, our API delivers the ground truth your models need.</p>
+                <p class="text-slate-600 mb-8 leading-relaxed">All signals ship with directional confidence scores, historical backtest data back to 2015, and point-in-time correct delivery to prevent look-ahead bias.</p>
+                <div class="bg-slate-800 rounded-lg p-6 overflow-x-auto">
+                    <pre class="text-xs font-mono text-emerald-400"><code>{
+  "signal_id": "fin_signal_00293",
+  "ticker": "MRNA",
+  "signal_date": "2026-03-07",
+  "signal_type": "clinical_trial_catalyst",
+  "direction": "bullish",
+  "confidence": 0.78,
+  "historical_hit_rate": 0.71,
+  "avg_3d_return": "+4.2%"
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 text-center">
+                <div class="text-3xl font-extrabold text-yellow-500 mb-2">10+</div>
+                <div class="font-bold text-slate-800">Years Backtest Depth</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-slate-200 text-center">
+                <div class="text-3xl font-extrabold text-yellow-500 mb-2">Daily</div>
+                <div class="font-bold text-slate-800">Signal Delivery</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-slate-200 text-center">
+                <div class="text-3xl font-extrabold text-yellow-500 mb-2">Snowflake</div>
+                <div class="font-bold text-slate-800">Native Data Share</div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="contact.html" class="bg-slate-900 text-white px-10 py-4 rounded font-bold hover:bg-slate-800 transition inline-block">Discuss Custom Quant Pipelines</a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 flex h-screen overflow-hidden font-sans">
+
+    <aside class="w-64 bg-slate-900 text-slate-300 flex-shrink-0 overflow-y-auto">
+        <div class="p-6">
+            <a href="index.html" class="text-xl font-bold text-white mb-8 block">OmniSync API v2</a>
+            <nav class="space-y-4 text-sm">
+                <div>
+                    <h4 class="text-slate-500 uppercase font-bold text-xs tracking-wider mb-2">Getting Started</h4>
+                    <a href="#auth" class="block hover:text-white py-1 text-white">Authentication</a>
+                    <a href="#rate-limits" class="block hover:text-white py-1">Rate Limits</a>
+                    <a href="#errors" class="block hover:text-white py-1">Error Codes</a>
+                </div>
+                <div>
+                    <h4 class="text-slate-500 uppercase font-bold text-xs tracking-wider mb-2 mt-6">Endpoints</h4>
+                    <a href="#pharma" class="block hover:text-white py-1">/v1/pharma/trials</a>
+                    <a href="#sports" class="block hover:text-white py-1">/v1/sports/props</a>
+                    <a href="#b2b" class="block hover:text-white py-1">/v1/b2b/enrich</a>
+                    <a href="#finance" class="block hover:text-white py-1">/v1/finance/signals</a>
+                </div>
+                <div>
+                    <h4 class="text-slate-500 uppercase font-bold text-xs tracking-wider mb-2 mt-6">Resources</h4>
+                    <a href="data-schemas.html" class="block hover:text-white py-1">Data Schemas</a>
+                    <a href="data-delivery.html" class="block hover:text-white py-1">Delivery Methods</a>
+                    <a href="sandbox.html" class="block hover:text-white py-1">Sandbox</a>
+                    <a href="status.html" class="block hover:text-white py-1">System Status</a>
+                </div>
+            </nav>
+        </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-12 bg-white">
+        <div class="max-w-4xl">
+            <h1 class="text-3xl font-bold mb-2" id="auth">Authentication</h1>
+            <p class="text-slate-500 text-sm mb-6">OmniSync API v2 · Updated March 2026</p>
+            <p class="text-slate-600 mb-8">Authenticate your API requests by including your secret API key in the request header. Manage your API keys in the developer dashboard after account activation.</p>
+
+            <div class="bg-slate-800 rounded-lg p-6 mb-4 shadow-inner">
+                <div class="text-slate-400 text-xs mb-3 font-mono uppercase tracking-widest">cURL</div>
+                <code class="text-green-400 font-mono text-sm leading-relaxed">
+                    curl -X GET "https://api.omnisyncdata.com/v1/pharma/trials?status=active" \<br>
+                    &nbsp;&nbsp;-H "Authorization: Bearer os_live_YOUR_API_KEY" \<br>
+                    &nbsp;&nbsp;-H "Content-Type: application/json"
+                </code>
+            </div>
+            <div class="bg-slate-800 rounded-lg p-6 mb-12 shadow-inner">
+                <div class="text-slate-400 text-xs mb-3 font-mono uppercase tracking-widest">Python</div>
+                <code class="text-green-400 font-mono text-sm leading-relaxed">
+                    import omnisync<br><br>
+                    client = omnisync.Client(api_key="os_live_YOUR_API_KEY")<br>
+                    results = client.pharma.trials.list(status="active")<br>
+                    print(results.data)
+                </code>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2" id="rate-limits">Rate Limits</h2>
+            <div class="overflow-x-auto mb-12">
+                <table class="w-full text-sm border border-slate-200 rounded-lg overflow-hidden">
+                    <thead class="bg-slate-100 font-bold text-slate-700">
+                        <tr>
+                            <th class="p-4 text-left">Plan</th>
+                            <th class="p-4 text-left">Requests/min</th>
+                            <th class="p-4 text-left">Monthly Quota</th>
+                            <th class="p-4 text-left">Burst Allowance</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-600">
+                        <tr class="border-t border-slate-100">
+                            <td class="p-4">Starter</td>
+                            <td class="p-4 font-mono">60</td>
+                            <td class="p-4 font-mono">100K</td>
+                            <td class="p-4 font-mono">120 req/min</td>
+                        </tr>
+                        <tr class="border-t border-slate-100">
+                            <td class="p-4">Professional</td>
+                            <td class="p-4 font-mono">600</td>
+                            <td class="p-4 font-mono">1M</td>
+                            <td class="p-4 font-mono">1,200 req/min</td>
+                        </tr>
+                        <tr class="border-t border-slate-100">
+                            <td class="p-4">Enterprise</td>
+                            <td class="p-4 font-mono">Unlimited</td>
+                            <td class="p-4 font-mono">Unlimited</td>
+                            <td class="p-4 font-mono">Dedicated cluster</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">Response Format</h2>
+            <p class="text-slate-600 mb-4">All responses are returned as standard JSON. Timestamps use ISO 8601 format. Paginate with <code class="bg-slate-100 px-1.5 py-0.5 rounded text-sm font-mono">cursor</code> and <code class="bg-slate-100 px-1.5 py-0.5 rounded text-sm font-mono">limit</code> parameters.</p>
+            <div class="bg-slate-100 rounded-lg p-6 border border-slate-200 mb-12">
+                <pre class="text-sm font-mono text-slate-800"><code>{
+  "status": "success",
+  "data": {
+    "total_records": 1420,
+    "cursor": "eyJpZCI6MTQyMH0",
+    "results": [ ... ]
+  },
+  "meta": {
+    "latency_ms": 42,
+    "api_version": "2.1.0"
+  }
+}</code></pre>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2" id="errors">Error Codes</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border border-slate-200 rounded-lg overflow-hidden">
+                    <thead class="bg-slate-100 font-bold text-slate-700">
+                        <tr>
+                            <th class="p-4 text-left">Code</th>
+                            <th class="p-4 text-left">Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-600">
+                        <tr class="border-t border-slate-100"><td class="p-4 font-mono text-red-500">401</td><td class="p-4">Invalid or missing API key</td></tr>
+                        <tr class="border-t border-slate-100"><td class="p-4 font-mono text-red-500">429</td><td class="p-4">Rate limit exceeded — back off and retry</td></tr>
+                        <tr class="border-t border-slate-100"><td class="p-4 font-mono text-red-500">503</td><td class="p-4">Pipeline maintenance window — check status.html</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

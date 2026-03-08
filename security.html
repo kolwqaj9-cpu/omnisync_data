@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Infrastructure | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="data-catalog.html" class="hover:text-blue-600 transition">Data Catalog</a>
+            <a href="data-provenance.html" class="hover:text-blue-600 transition">Compliance</a>
+            <a href="security.html" class="text-blue-600 transition">Security</a>
+            <a href="contact.html" class="hover:text-blue-600 transition">Enterprise Sales</a>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-extrabold mb-4">Enterprise-Grade Security</h1>
+            <p class="text-lg text-slate-400">Your data pipelines are hardened. Your models are secure.</p>
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto py-16 px-4">
+        <div class="space-y-10">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <h3 class="text-2xl font-bold mb-4 flex items-center"><span class="bg-blue-100 text-blue-700 p-2 rounded mr-4 text-xl">🔒</span> Data Encryption</h3>
+                <p class="text-slate-600 leading-relaxed">All API endpoints enforce TLS 1.3 connections. Data at rest is secured using AES-256 encryption across our entire distributed database architecture. API keys are hashed with bcrypt and never stored in plaintext.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <h3 class="text-2xl font-bold mb-4 flex items-center"><span class="bg-indigo-100 text-indigo-700 p-2 rounded mr-4 text-xl">🛡️</span> Network Isolation</h3>
+                <p class="text-slate-600 leading-relaxed">For enterprise clients, we offer dedicated Virtual Private Cloud (VPC) peering, AWS PrivateLink, and IP whitelisting to ensure your data pipeline never traverses the public internet. All egress is routed through dedicated NAT gateways.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <h3 class="text-2xl font-bold mb-4 flex items-center"><span class="bg-emerald-100 text-emerald-700 p-2 rounded mr-4 text-xl">✅</span> SOC 2 Compliance Readiness</h3>
+                <p class="text-slate-600 leading-relaxed">Our systems are architected to map to SOC 2 Type II controls — including strict access management, immutable audit logging, continuous vulnerability scanning, and automated intrusion detection.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <h3 class="text-2xl font-bold mb-4 flex items-center"><span class="bg-yellow-100 text-yellow-700 p-2 rounded mr-4 text-xl">🔑</span> Access Control & Key Management</h3>
+                <p class="text-slate-600 leading-relaxed">API keys are scoped by endpoint and rate limit. Enterprise accounts support SAML SSO, role-based access control (RBAC), and automatic key rotation policies. All key issuance and revocation events generate immutable audit log entries.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+                <h3 class="text-2xl font-bold mb-4 flex items-center"><span class="bg-red-100 text-red-700 p-2 rounded mr-4 text-xl">🚨</span> Incident Response</h3>
+                <p class="text-slate-600 leading-relaxed">Our 24/7 monitoring stack triggers automated incident response playbooks within seconds of any anomaly detection. Enterprise clients receive direct notification within 15 minutes of any service degradation, with a full post-mortem within 48 hours.</p>
+            </div>
+        </div>
+
+        <div class="mt-12 bg-slate-900 text-white p-8 rounded-xl text-center">
+            <h3 class="text-xl font-bold mb-3">Need a Security Review?</h3>
+            <p class="text-slate-400 mb-6">We support enterprise procurement security questionnaires (VSQ, CAIQ, SIG Lite) and can arrange a technical security call with our infrastructure team.</p>
+            <a href="contact.html" class="bg-blue-600 text-white px-8 py-3 rounded font-bold hover:bg-blue-500 transition inline-block">Contact Security Team</a>
+        </div>
+    </section>
+</body>
+</html>

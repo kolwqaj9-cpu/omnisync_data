@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Catalog | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="data-catalog.html" class="text-blue-600 transition">Data Catalog</a>
+            <a href="api-docs.html" class="hover:text-blue-600 transition">API & Docs</a>
+            <a href="data-provenance.html" class="hover:text-blue-600 transition">Compliance</a>
+            <a href="about.html" class="hover:text-blue-600 transition">Company</a>
+        </div>
+        <div>
+            <a href="contact.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-md text-sm font-bold hover:bg-slate-800 transition shadow-sm">Contact Sales</a>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl font-extrabold mb-4">Premium Data Catalog</h1>
+            <p class="text-lg text-slate-400 max-w-2xl">Cleaned, structured, and continuously updated datasets available via REST API, Amazon S3, or Snowflake Data Sharing.</p>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto py-16 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+                <div class="text-xs font-bold text-blue-600 bg-blue-50 inline-block px-3 py-1 rounded-full mb-4">Healthcare & Pharma</div>
+                <h3 class="text-2xl font-bold mb-3">Clinical & Pharmaceutical Intelligence</h3>
+                <p class="text-slate-600 mb-6 text-sm">Aggregated, de-identified clinical trial data, pharmacological research, and adverse event reports. Optimized for medical LLM training.</p>
+                <ul class="text-sm text-slate-500 space-y-2 mb-8 border-t border-slate-100 pt-4">
+                    <li>• 15M+ Indexed Research Papers</li>
+                    <li>• JSON/XML Structured Format</li>
+                    <li>• Daily Delta Updates</li>
+                </ul>
+                <a href="healthcare-data.html" class="text-blue-600 font-bold hover:underline">View Dataset →</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+                <div class="text-xs font-bold text-emerald-600 bg-emerald-50 inline-block px-3 py-1 rounded-full mb-4">Sports Analytics</div>
+                <h3 class="text-2xl font-bold mb-3">Predictive Prop & Biomechanics Data</h3>
+                <p class="text-slate-600 mb-6 text-sm">High-fidelity predictive vectors, player prop analytics, and historical physics data for MLB and major leagues.</p>
+                <ul class="text-sm text-slate-500 space-y-2 mb-8 border-t border-slate-100 pt-4">
+                    <li>• Real-time API Latency &lt; 50ms</li>
+                    <li>• Sub-millimeter tracking data</li>
+                    <li>• Backtesting sandbox available</li>
+                </ul>
+                <a href="sports-analytics.html" class="text-blue-600 font-bold hover:underline">View Dataset →</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+                <div class="text-xs font-bold text-purple-600 bg-purple-50 inline-block px-3 py-1 rounded-full mb-4">Sales Intelligence</div>
+                <h3 class="text-2xl font-bold mb-3">B2B Firmographic & Contact Graphs</h3>
+                <p class="text-slate-600 mb-6 text-sm">Verified professional contact details, company hierarchies, and tech-stack signals for automated outbound marketing.</p>
+                <ul class="text-sm text-slate-500 space-y-2 mb-8 border-t border-slate-100 pt-4">
+                    <li>• 95%+ Email Deliverability Rate</li>
+                    <li>• Real-time webhook enrichment</li>
+                    <li>• CCPA/GDPR Compliant Sourcing</li>
+                </ul>
+                <a href="b2b-firmographic-data.html" class="text-blue-600 font-bold hover:underline">View Dataset →</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+                <div class="text-xs font-bold text-yellow-600 bg-yellow-50 inline-block px-3 py-1 rounded-full mb-4">Quantitative Finance</div>
+                <h3 class="text-2xl font-bold mb-3">Alternative Alpha Data Feeds</h3>
+                <p class="text-slate-600 mb-6 text-sm">Unconventional signals derived from hiring trends, clinical trial momentum, and supply-chain events correlated with equity movements.</p>
+                <ul class="text-sm text-slate-500 space-y-2 mb-8 border-t border-slate-100 pt-4">
+                    <li>• Daily, Weekly & Historical Feeds</li>
+                    <li>• Parquet & CSV Formats</li>
+                    <li>• Snowflake Native Sharing</li>
+                </ul>
+                <a href="financial-data.html" class="text-blue-600 font-bold hover:underline">View Dataset →</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+                <div class="text-xs font-bold text-red-600 bg-red-50 inline-block px-3 py-1 rounded-full mb-4">Custom Pipelines</div>
+                <h3 class="text-2xl font-bold mb-3">Bespoke Extraction Engineering</h3>
+                <p class="text-slate-600 mb-6 text-sm">Don't see the dataset you need? Our engineers build and maintain custom crawlers targeting your exact data sources.</p>
+                <ul class="text-sm text-slate-500 space-y-2 mb-8 border-t border-slate-100 pt-4">
+                    <li>• Anti-bot bypass capabilities</li>
+                    <li>• Managed SLA maintenance</li>
+                    <li>• Schema design included</li>
+                </ul>
+                <a href="custom-scraping.html" class="text-blue-600 font-bold hover:underline">Learn More →</a>
+            </div>
+
+            <div class="bg-slate-900 p-8 rounded-xl shadow-sm hover:shadow-lg transition">
+                <div class="text-xs font-bold text-blue-400 bg-slate-800 inline-block px-3 py-1 rounded-full mb-4">Developer Tools</div>
+                <h3 class="text-2xl font-bold mb-3 text-white">Sandbox & Sample Data</h3>
+                <p class="text-slate-400 mb-6 text-sm">Download 1% production samples to validate schemas, backtest models, and accelerate integration before signing an enterprise agreement.</p>
+                <ul class="text-sm text-slate-500 space-y-2 mb-8 border-t border-slate-700 pt-4">
+                    <li>• Free to qualified researchers</li>
+                    <li>• ZIP, CSV, JSONL formats</li>
+                    <li>• No credit card required</li>
+                </ul>
+                <a href="sandbox.html" class="text-blue-400 font-bold hover:underline">Access Sandbox →</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

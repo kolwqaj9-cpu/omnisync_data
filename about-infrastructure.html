@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Infrastructure | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="about.html" class="hover:text-blue-600 transition">About</a>
+            <a href="security.html" class="hover:text-blue-600 transition">Security</a>
+            <a href="status.html" class="hover:text-blue-600 transition">Status</a>
+            <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-extrabold mb-4">Engineered for Scale</h1>
+            <p class="text-lg text-slate-400">A deep dive into the distributed systems architecture that powers OmniSync Data pipelines at production scale.</p>
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto py-20 px-4 space-y-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+            <h3 class="font-bold text-xl mb-3 text-slate-800 flex items-center">
+                <span class="bg-slate-100 p-2 rounded mr-3">⚙️</span> Concurrency & Extraction Model
+            </h3>
+            <p class="text-slate-600 leading-relaxed">Our core extraction systems are built on Python's asyncio framework with a custom distributed task scheduler. Worker pools are deployed across geographically distributed nodes, executing thousands of rate-limited, session-aware requests per second without triggering target-site edge-node blocks. We maintain an active proxy mesh across 190+ countries for geo-restricted sources.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+            <h3 class="font-bold text-xl mb-3 text-slate-800 flex items-center">
+                <span class="bg-slate-100 p-2 rounded mr-3">🧠</span> AI-Driven DOM Parsing & Schema Normalization
+            </h3>
+            <p class="text-slate-600 leading-relaxed">Rather than fragile CSS selector chains, we deploy fine-tuned vision and text models to understand document structure semantically. This means our pipelines are resilient to frontend redesigns and A/B test variations that break traditional scrapers. Extracted entities are automatically mapped to our canonical schemas via a trained NER pipeline.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+            <h3 class="font-bold text-xl mb-3 text-slate-800 flex items-center">
+                <span class="bg-slate-100 p-2 rounded mr-3">💾</span> Storage & Delivery Architecture
+            </h3>
+            <p class="text-slate-600 leading-relaxed">Processed data is immediately normalized and routed via event streaming (Kafka) into column-oriented databases (Apache Parquet on S3). This architecture allows sub-millisecond querying via our REST endpoints while supporting unlimited-scale batch exports for training workflows. Snowflake Data Sharing is provisioned with zero data duplication.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+            <h3 class="font-bold text-xl mb-3 text-slate-800 flex items-center">
+                <span class="bg-slate-100 p-2 rounded mr-3">🔄</span> Pipeline Monitoring & Auto-Repair
+            </h3>
+            <p class="text-slate-600 leading-relaxed">Every pipeline runs under continuous schema-diff monitoring. If a target source changes its output structure, our anomaly detection flags the issue within minutes and triggers an automated remediation workflow. Our SLA guarantees full pipeline restoration within 72 hours of any source-side change — with no manual intervention required from the client.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
+            <h3 class="font-bold text-xl mb-3 text-slate-800 flex items-center">
+                <span class="bg-slate-100 p-2 rounded mr-3">🌍</span> Global Redundancy
+            </h3>
+            <p class="text-slate-600 leading-relaxed">All critical services run across three independent AWS availability zones with active-active failover. Our 99.998% uptime SLA is backed by automated circuit breakers, blue/green deployment pipelines, and a dedicated on-call engineering rotation for Tier-1 enterprise clients.</p>
+        </div>
+    </section>
+</body>
+</html>

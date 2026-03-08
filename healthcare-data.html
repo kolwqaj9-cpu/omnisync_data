@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare & Clinical Data | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="data-catalog.html" class="text-blue-600 transition">Data Catalog</a>
+            <a href="api-docs.html" class="hover:text-blue-600 transition">API & Docs</a>
+            <a href="data-provenance.html" class="hover:text-blue-600 transition">Compliance</a>
+            <a href="about.html" class="hover:text-blue-600 transition">Company</a>
+        </div>
+        <div>
+            <a href="contact.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-md text-sm font-bold hover:bg-slate-800 transition">Contact Sales</a>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4">Vertical: Healthcare & Pharma</div>
+            <h1 class="text-4xl font-extrabold mb-4">Clinical Research & Trial Intelligence</h1>
+            <p class="text-lg text-slate-400 max-w-2xl">Structured, NLP-ready datasets extracted from millions of medical journals, clinical trials, and adverse event reports.</p>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto py-16 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Built for Medical LLM Training</h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    Raw medical data is messy. It exists in massive XML blobs, fragmented PDFs, and unstructured case reports. OmniSync Data's proprietary ingestion engine processes sources like PubMed Central (PMC), structuring them into high-fidelity JSON arrays ready for fine-tuning.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-2">✓</span>
+                        <span class="text-slate-700"><strong>Adverse Event Extraction:</strong> Automated tagging of drug-induced anomalies (e.g., DILI indicators) with confidence scoring.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-2">✓</span>
+                        <span class="text-slate-700"><strong>Structured Interventions:</strong> Clean dosage, demographic, and outcome mappings normalized to MeSH ontology.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-2">✓</span>
+                        <span class="text-slate-700"><strong>HIPAA Compliant Anonymization:</strong> Safe-harbor de-identification applied at ingestion — zero PHI in output.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 font-bold mr-2">✓</span>
+                        <span class="text-slate-700"><strong>Daily Delta Updates:</strong> Fresh clinical trial registrations and paper publications pushed to your S3 bucket every 24 hours.</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="bg-blue-600 text-white px-8 py-3 rounded font-bold hover:bg-blue-700 transition inline-block">Request Data Sample</a>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-white p-8 rounded-xl shadow border border-slate-200">
+                    <h3 class="font-bold text-slate-800 mb-4 border-b pb-2">Sample Output Schema (JSON)</h3>
+                    <pre class="text-xs font-mono text-slate-600 overflow-x-auto"><code>{
+  "document_id": "PMC12834359",
+  "entities": {
+    "drugs": ["Acetaminophen", "N-acetylcysteine"],
+    "adverse_events": [
+      {
+        "term": "Hepatotoxicity",
+        "severity": "Grade 3",
+        "confidence": 0.982
+      }
+    ]
+  },
+  "cohort_size": 245,
+  "statistical_significance": true,
+  "mesh_terms": ["Liver Diseases", "Drug Toxicity"]
+}</code></pre>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                    <h4 class="font-bold text-blue-800 mb-3">Dataset Specs</h4>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <div class="flex justify-between"><span>Total Documents</span><span class="font-mono font-bold">15M+</span></div>
+                        <div class="flex justify-between"><span>Update Frequency</span><span class="font-mono font-bold">Daily</span></div>
+                        <div class="flex justify-between"><span>Format</span><span class="font-mono font-bold">JSONL / Parquet</span></div>
+                        <div class="flex justify-between"><span>Delivery</span><span class="font-mono font-bold">S3 / API</span></div>
+                        <div class="flex justify-between"><span>Compliance</span><span class="font-mono font-bold text-green-600">HIPAA Safe Harbor</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-t border-slate-200 py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-4">Explore the Healthcare AI Solution</h2>
+            <p class="text-slate-600 mb-8">See how AI labs and biotech firms are using our clinical data to train diagnostic models.</p>
+            <a href="solutions-healthcare-ai.html" class="bg-slate-900 text-white px-8 py-3 rounded font-bold hover:bg-slate-800 transition inline-block">View Healthcare AI Use Case →</a>
+        </div>
+    </section>
+</body>
+</html>

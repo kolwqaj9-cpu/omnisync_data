@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Sandbox | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="data-catalog.html" class="hover:text-blue-600 transition">Data Catalog</a>
+            <a href="api-docs.html" class="hover:text-blue-600 transition">API & Docs</a>
+            <a href="contact.html" class="hover:text-blue-600 transition">Enterprise Sales</a>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-extrabold mb-4">Developer Sandbox</h1>
+            <p class="text-lg text-slate-400 mb-6">Download 1% production samples to test integration, backtest models, and verify schemas before signing an enterprise agreement.</p>
+            <p class="text-sm text-slate-500">Free for qualified researchers and engineers. No credit card required.</p>
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto py-16 px-4">
+        <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-10 text-sm text-blue-800">
+            <strong>Access Note:</strong> Enter your work email below to generate a temporary download token. Sandbox access is free and expires after 7 days.
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 mb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <h3 class="font-bold text-lg text-slate-800">Medical NLP: DILI Golden Samples</h3>
+                <p class="text-sm text-slate-500 mt-1">500 JSON records extracted from PMC adverse event case reports. Includes confidence scores and MeSH entity mappings.</p>
+                <div class="flex gap-3 mt-2">
+                    <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded font-mono">JSONL</span>
+                    <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">12 MB</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">HIPAA Safe Harbor</span>
+                </div>
+            </div>
+            <button class="bg-slate-900 text-white px-5 py-2.5 rounded font-bold hover:bg-slate-700 transition whitespace-nowrap">Download Sample</button>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 mb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <h3 class="font-bold text-lg text-slate-800">Sports: MLB Pitch Physics Vectors</h3>
+                <p class="text-sm text-slate-500 mt-1">10,000 pitch events from the 2024 season including kinematics, release metrics, and calculated prop probability deltas.</p>
+                <div class="flex gap-3 mt-2">
+                    <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-mono">CSV</span>
+                    <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">8 MB</span>
+                </div>
+            </div>
+            <button class="bg-slate-900 text-white px-5 py-2.5 rounded font-bold hover:bg-slate-700 transition whitespace-nowrap">Download Sample</button>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 mb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <h3 class="font-bold text-lg text-slate-800">B2B: Verified IT & Engineering Contacts</h3>
+                <p class="text-sm text-slate-500 mt-1">1,000 SMTP-verified professional profiles in the software and cloud infrastructure sector with tech-stack enrichment.</p>
+                <div class="flex gap-3 mt-2">
+                    <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded font-mono">CSV</span>
+                    <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">5 MB</span>
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">CCPA Compliant</span>
+                </div>
+            </div>
+            <button class="bg-slate-900 text-white px-5 py-2.5 rounded font-bold hover:bg-slate-700 transition whitespace-nowrap">Download Sample</button>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <h3 class="font-bold text-lg text-slate-800">Alternative Finance: Clinical Trial Signals</h3>
+                <p class="text-sm text-slate-500 mt-1">30-day lookback of biotech trial catalyst signals with ticker correlations and directional confidence scores.</p>
+                <div class="flex gap-3 mt-2">
+                    <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded font-mono">JSON</span>
+                    <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded">3 MB</span>
+                </div>
+            </div>
+            <button class="bg-slate-900 text-white px-5 py-2.5 rounded font-bold hover:bg-slate-700 transition whitespace-nowrap">Download Sample</button>
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-slate-500 text-sm mb-4">Ready to go beyond sandbox limits?</p>
+            <a href="contact.html" class="bg-blue-600 text-white px-8 py-3 rounded font-bold hover:bg-blue-700 transition inline-block">Request Full Enterprise Access</a>
+        </div>
+    </section>
+</body>
+</html>

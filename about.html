@@ -1,31 +1,98 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于我们 - OmniSync Data</title>
+    <title>About Us | OmniSync Data</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <nav class="p-6 bg-white shadow-sm flex justify-between items-center">
-        <div class="text-2xl font-bold text-blue-700"><a href="index.html">OmniSync Data</a></div>
-        <div class="space-x-6 text-sm font-medium">
-            <a href="index.html" class="hover:text-blue-600">首页</a>
-            <a href="features.html" class="hover:text-blue-600">功能特性</a>
-            <a href="pricing.html" class="hover:text-blue-600">产品定价</a>
-            <a href="about.html" class="text-blue-600">关于我们</a>
-            <a href="contact.html" class="hover:text-blue-600">联系我们</a>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="data-catalog.html" class="hover:text-blue-600 transition">Data Catalog</a>
+            <a href="api-docs.html" class="hover:text-blue-600 transition">API & Docs</a>
+            <a href="data-provenance.html" class="hover:text-blue-600 transition">Compliance</a>
+            <a href="about.html" class="text-blue-600 transition">Company</a>
+        </div>
+        <div>
+            <a href="contact.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-md text-sm font-bold hover:bg-slate-800 transition">Contact Sales</a>
         </div>
     </nav>
-    <section class="max-w-3xl mx-auto py-16 px-4">
-        <h2 class="text-3xl font-bold mb-6">我们的使命</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">
-            OmniSync Data 致力于将复杂的数据流转过程极简化。我们深知在现代商业环境中，获取和处理数据的成本高昂。我们的目标是通过先进的工程架构和 AI 技术，让每一家企业都能轻松驾驭数据资产。
-        </p>
-        <h2 class="text-2xl font-bold mb-4">技术驱动</h2>
-        <p class="text-gray-700 leading-relaxed">
-            我们的核心系统采用前沿的分布式架构，确保在海量数据吞吐下依然保持高可用性与精确度。
-        </p>
+
+    <header class="bg-slate-900 text-white py-24 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl font-extrabold mb-6">Engineering Truth from Noise</h1>
+            <p class="text-xl text-slate-400">OmniSync Data was built to solve the hardest problem in machine learning: the acquisition of clean, legally compliant, and structured data at scale.</p>
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto py-20 px-4">
+        <h2 class="text-3xl font-bold mb-8 text-center">Our Pedigree</h2>
+        <div class="text-lg text-slate-600 mx-auto space-y-6 leading-relaxed">
+            <p>
+                Founded by Anthony Parrish, OmniSync Data brings nearly two decades of hardcore computer science and enterprise engineering experience to the data infrastructure market.
+            </p>
+            <p>
+                We observed that quantitative analysts and AI researchers were spending 80% of their time building brittle web scrapers and cleaning unstructured text. We built OmniSync to flip that ratio. Our proprietary extraction engines currently process millions of data points daily across global pharmaceutical databases, live sports telemetry, and complex B2B networks.
+            </p>
+            <p>
+                Whether you are training a massive language model for medical diagnostics or building low-latency predictive models for quantitative trading, we provide the raw material your algorithms need to succeed.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-white border-t border-b border-slate-200 py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Core Principles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center">
+                    <div class="text-4xl mb-4">⚙️</div>
+                    <h3 class="font-bold text-xl mb-3">Engineering First</h3>
+                    <p class="text-slate-600 text-sm">Every decision is made by engineers, for engineers. We obsess over schema consistency, latency, and delivery reliability.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h3 class="font-bold text-xl mb-3">Compliance by Default</h3>
+                    <p class="text-slate-600 text-sm">Legal and ethical sourcing is not a checkbox. It's baked into every layer of our ingestion and processing architecture.</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🔬</div>
+                    <h3 class="font-bold text-xl mb-3">Domain Depth</h3>
+                    <p class="text-slate-600 text-sm">We don't scrape the entire internet. We go deep on three high-value verticals and build specialist pipelines that generalists can't replicate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto py-20 px-4">
+        <h2 class="text-3xl font-bold mb-12 text-center">By the Numbers</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-4xl font-extrabold text-blue-600 mb-2">15M+</div>
+                <div class="text-slate-600 text-sm font-medium">Medical Records Indexed</div>
+            </div>
+            <div>
+                <div class="text-4xl font-extrabold text-blue-600 mb-2">200M+</div>
+                <div class="text-slate-600 text-sm font-medium">B2B Profiles Verified</div>
+            </div>
+            <div>
+                <div class="text-4xl font-extrabold text-blue-600 mb-2">99.998%</div>
+                <div class="text-slate-600 text-sm font-medium">Platform Uptime</div>
+            </div>
+            <div>
+                <div class="text-4xl font-extrabold text-blue-600 mb-2">&lt;50ms</div>
+                <div class="text-slate-600 text-sm font-medium">API Latency</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-900 text-white py-16 px-4 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-2xl font-extrabold mb-4">Want to go deeper on our infrastructure?</h2>
+            <p class="text-slate-400 mb-8">Read about the distributed systems architecture that powers our data pipelines.</p>
+            <a href="about-infrastructure.html" class="bg-white text-slate-900 px-8 py-3 rounded font-bold hover:bg-slate-100 transition">View Infrastructure Overview</a>
+        </div>
     </section>
 </body>
 </html>

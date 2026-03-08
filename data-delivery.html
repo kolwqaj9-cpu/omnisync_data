@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Delivery & Integration | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="data-catalog.html" class="hover:text-blue-600 transition">Data Catalog</a>
+            <a href="api-docs.html" class="text-blue-600 transition">API & Docs</a>
+            <a href="partners.html" class="hover:text-blue-600 transition">Integrations</a>
+            <a href="contact.html" class="hover:text-blue-600 transition">Enterprise Sales</a>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl font-extrabold mb-4">Flexible Data Delivery</h1>
+            <p class="text-lg text-slate-400 max-w-2xl">Integrate our pipelines directly into your existing infrastructure. We support low-latency streams, batch cloud delivery, and native data sharing.</p>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto py-16 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-8 rounded-xl shadow border border-slate-200 hover:shadow-lg transition">
+                <div class="text-3xl mb-4">⚡</div>
+                <h3 class="text-2xl font-bold mb-3">REST API & Webhooks</h3>
+                <p class="text-slate-600 mb-6 text-sm leading-relaxed">Best for real-time sports analytics and live CRM enrichment. Sub-50ms latency with official Python, Node.js, and Go SDKs available on GitHub.</p>
+                <ul class="text-sm text-slate-500 space-y-2 border-t border-slate-100 pt-4 mb-6">
+                    <li>✓ Python / Node.js / Go SDKs</li>
+                    <li>✓ Webhook push for delta events</li>
+                    <li>✓ Cursor-based pagination</li>
+                </ul>
+                <a href="api-docs.html" class="text-blue-600 font-bold hover:underline">View API Docs →</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow border border-slate-200 hover:shadow-lg transition">
+                <div class="text-3xl mb-4">☁️</div>
+                <h3 class="text-2xl font-bold mb-3">Cloud Storage (S3 / GCS)</h3>
+                <p class="text-slate-600 mb-6 text-sm leading-relaxed">Best for massive medical NLP datasets. Daily, weekly, or monthly delta drops directly into your secure Amazon S3 or Google Cloud buckets in Parquet or JSONL formats.</p>
+                <ul class="text-sm text-slate-500 space-y-2 border-t border-slate-100 pt-4 mb-6">
+                    <li>✓ Parquet, JSONL, CSV formats</li>
+                    <li>✓ Automated delta manifests</li>
+                    <li>✓ Cross-account bucket policy setup</li>
+                </ul>
+                <a href="contact.html" class="text-blue-600 font-bold hover:underline">Setup Cloud Sync →</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow border border-slate-200 hover:shadow-lg transition">
+                <div class="text-3xl mb-4">❄️</div>
+                <h3 class="text-2xl font-bold mb-3">Snowflake Data Sharing</h3>
+                <p class="text-slate-600 mb-6 text-sm leading-relaxed">Zero-ETL integration. Query our live B2B firmographic and contact databases directly from your Snowflake warehouse without moving a single byte of data.</p>
+                <ul class="text-sm text-slate-500 space-y-2 border-t border-slate-100 pt-4 mb-6">
+                    <li>✓ Native Snowflake Marketplace listing</li>
+                    <li>✓ Zero data egress costs</li>
+                    <li>✓ Instant provisioning</li>
+                </ul>
+                <a href="contact.html" class="text-blue-600 font-bold hover:underline">Request Snowflake Access →</a>
+            </div>
+        </div>
+
+        <div class="bg-slate-900 text-white p-10 rounded-xl">
+            <h2 class="text-2xl font-bold mb-6 text-center">Comparison Matrix</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-slate-400 border-b border-slate-700">
+                            <th class="text-left p-3">Method</th>
+                            <th class="p-3">Latency</th>
+                            <th class="p-3">Best For</th>
+                            <th class="p-3">Max Volume</th>
+                            <th class="p-3">Setup Time</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-300">
+                        <tr class="border-b border-slate-700">
+                            <td class="p-3 font-bold">REST API</td>
+                            <td class="p-3 text-center font-mono text-emerald-400">&lt;50ms</td>
+                            <td class="p-3 text-center">Real-time enrichment</td>
+                            <td class="p-3 text-center font-mono">10M req/mo</td>
+                            <td class="p-3 text-center">Minutes</td>
+                        </tr>
+                        <tr class="border-b border-slate-700">
+                            <td class="p-3 font-bold">S3 Drop</td>
+                            <td class="p-3 text-center font-mono">Daily</td>
+                            <td class="p-3 text-center">LLM training, bulk ML</td>
+                            <td class="p-3 text-center font-mono">Unlimited</td>
+                            <td class="p-3 text-center">1–2 hours</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-bold">Snowflake</td>
+                            <td class="p-3 text-center font-mono">Near-real-time</td>
+                            <td class="p-3 text-center">Analytics, BI queries</td>
+                            <td class="p-3 text-center font-mono">Unlimited</td>
+                            <td class="p-3 text-center">Hours</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
