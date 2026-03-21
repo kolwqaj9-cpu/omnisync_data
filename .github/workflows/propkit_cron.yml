@@ -1,0 +1,38 @@
+name: PropKit AutoDL Instance Cron
+
+on:
+  # 北京时间 08:00 = UTC 00:00
+  # 北京时间 14:00 = UTC 06:00
+  # 北京时间 20:00 = UTC 12:00
+  schedule:
+    - cron: '0 0 * * *'   # 北京时间 08:00
+    - cron: '0 6 * * *'   # 北京时间 14:00
+    - cron: '0 12 * * *'  # 北京时间 20:00
+  workflow_dispatch:       # 支持手动触发（用于测试）
+
+jobs:
+  start-autodl-instance:
+    name: Start AutoDL Instance 97b911b700-0e555342
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send POST request to AutoDL API
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://www.autodl.com/api/v1/instance/start" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: ${{ secrets.AUTODL_TOKEN }}" \
+            -d '{"instance_id": "97b911b700-0e555342"}')
+
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | head -n -1)
+
+          echo "HTTP Status: $http_code"
+          echo "Response Body: $body"
+
+          if [ "$http_code" -ne 200 ]; then
+            echo "::error::AutoDL API 请求失败，状态码: $http_code"
+            exit 1
+          fi
+
+          echo "实例启动请求已成功发送！"

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>棒球飞行轨迹威胁分析</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f1117;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 8px; color: #fff; }
+    p.subtitle { color: #888; font-size: 0.9rem; margin-bottom: 32px; }
+    .chart-wrapper {
+      background: #1a1d27;
+      border: 1px solid #2e3142;
+      border-radius: 12px;
+      padding: 24px;
+      width: 100%;
+      max-width: 960px;
+    }
+    canvas { width: 100% !important; }
+    .config-hint {
+      margin-top: 24px;
+      font-size: 0.82rem;
+      color: #555;
+      text-align: center;
+    }
+    .config-hint code {
+      background: #22253a;
+      border-radius: 4px;
+      padding: 2px 6px;
+      color: #7eb8f7;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚾ PropKit AI — 棒球威胁轨迹分析</h1>
+  <p class="subtitle">数据来源：Cloudflare R2 · latest_threat_report.bin · 1024 × float32</p>
+
+  <div class="chart-wrapper">
+    <canvas id="threatChart" height="380"></canvas>
+  </div>
+
+  <p class="config-hint">
+    请在调用前将 <code>window.ENV_R2_PUBLIC_URL</code> 设置为你的 R2 公开访问地址，
+    或直接向 <code>loadThreatChart('threatChart', 'https://your-r2-url')</code> 传参。
+  </p>
+
+  <script src="threat-chart.js"></script>
+  <script>
+    // 将下面的 URL 替换为你的 Cloudflare R2 公开访问地址
+    // 例如：https://pub-xxxx.r2.dev  或  https://your-domain.com/data
+    const R2_URL = 'https://YOUR_R2_PUBLIC_URL_HERE';
+
+    loadThreatChart('threatChart', R2_URL);
+  </script>
+</body>
+</html>

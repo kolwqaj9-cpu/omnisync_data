@@ -1,0 +1,42 @@
+name: PropKit AI Daily Sync
+
+on:
+  # 北京时间 08:00 = UTC 00:00
+  # 北京时间 14:00 = UTC 06:00
+  # 北京时间 20:00 = UTC 12:00
+  schedule:
+    - cron: '0 0 * * *'   # 北京时间 08:00
+    - cron: '0 6 * * *'   # 北京时间 14:00
+    - cron: '0 12 * * *'  # 北京时间 20:00
+  workflow_dispatch:       # 支持手动触发（点击 Run workflow 测试用）
+
+jobs:
+  start-autodl-instance:
+    name: Start AutoDL Instance
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send POST request to AutoDL API to start instance
+        run: |
+          echo "正在向 AutoDL 发送启动请求..."
+          echo "实例 ID: 97b911b700-0e555342"
+          echo "触发时间 (UTC): $(date -u '+%Y-%m-%d %H:%M:%S')"
+
+          response=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://www.autodl.com/api/v1/instance/start" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: ${{ secrets.AUTODL_TOKEN }}" \
+            -d '{"instance_id": "97b911b700-0e555342"}')
+
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | head -n -1)
+
+          echo "HTTP 状态码: $http_code"
+          echo "响应内容: $body"
+
+          if [ "$http_code" -ne 200 ]; then
+            echo "::error::启动失败！HTTP 状态码: $http_code，响应: $body"
+            exit 1
+          fi
+
+          echo "::notice::实例启动请求已成功发送！AutoDL 011 机正在启动中..."
