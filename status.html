@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Status | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="text-sm font-semibold text-emerald-600 flex items-center">
+            <span class="w-2 h-2 bg-emerald-500 rounded-full mr-2 inline-block animate-pulse"></span>
+            All Systems Operational
+        </div>
+    </nav>
+
+    <section class="max-w-4xl mx-auto py-16 px-4">
+        <h1 class="text-3xl font-extrabold mb-4 text-center">System Status</h1>
+        <p class="text-slate-500 text-center mb-10 text-sm">Last updated: March 7, 2026 at 08:00 UTC</p>
+
+        <div class="bg-emerald-50 border border-emerald-200 p-6 rounded-lg mb-10 flex items-center justify-between">
+            <span class="text-emerald-800 font-bold text-lg">✓ All Systems Operational</span>
+            <span class="text-emerald-600 font-mono text-sm">30-day uptime: 99.998%</span>
+        </div>
+
+        <div class="bg-white shadow rounded-lg overflow-hidden border border-slate-200 mb-10">
+            <div class="p-4 bg-slate-50 border-b border-slate-200">
+                <h2 class="font-bold text-slate-700">API Services</h2>
+            </div>
+            <div class="p-4 border-b border-slate-100 flex justify-between items-center">
+                <div>
+                    <span class="font-semibold text-slate-800">REST API Gateway</span>
+                    <span class="text-xs text-slate-400 ml-3 font-mono">api.omnisyncdata.com</span>
+                </div>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+            <div class="p-4 border-b border-slate-100 flex justify-between items-center">
+                <div>
+                    <span class="font-semibold text-slate-800">Webhook Delivery Engine</span>
+                </div>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+            <div class="p-4 flex justify-between items-center">
+                <div>
+                    <span class="font-semibold text-slate-800">API Authentication Service</span>
+                </div>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+        </div>
+
+        <div class="bg-white shadow rounded-lg overflow-hidden border border-slate-200 mb-10">
+            <div class="p-4 bg-slate-50 border-b border-slate-200">
+                <h2 class="font-bold text-slate-700">Data Pipelines</h2>
+            </div>
+            <div class="p-4 border-b border-slate-100 flex justify-between items-center">
+                <div>
+                    <span class="font-semibold text-slate-800">Pharma Ingestion Pipeline (PMC)</span>
+                    <span class="text-xs text-slate-400 ml-3">Daily delta at 03:00 UTC</span>
+                </div>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+            <div class="p-4 border-b border-slate-100 flex justify-between items-center">
+                <div>
+                    <span class="font-semibold text-slate-800">Sports Low-Latency Streams (MLB/NBA)</span>
+                    <span class="text-xs text-slate-400 ml-3">Pitch-by-pitch live</span>
+                </div>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+            <div class="p-4 border-b border-slate-100 flex justify-between items-center">
+                <div>
+                    <span class="font-semibold text-slate-800">B2B Email Validation Engine</span>
+                    <span class="text-xs text-slate-400 ml-3">Real-time SMTP verification</span>
+                </div>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+            <div class="p-4 flex justify-between items-center">
+                <div>
+                    <span class="font-semibold text-slate-800">S3 Batch Delivery (All Verticals)</span>
+                    <span class="text-xs text-slate-400 ml-3">Daily delivery at 06:00 UTC</span>
+                </div>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+        </div>
+
+        <div class="bg-white shadow rounded-lg overflow-hidden border border-slate-200">
+            <div class="p-4 bg-slate-50 border-b border-slate-200">
+                <h2 class="font-bold text-slate-700">Infrastructure</h2>
+            </div>
+            <div class="p-4 border-b border-slate-100 flex justify-between items-center">
+                <span class="font-semibold text-slate-800">Snowflake Data Sharing</span>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+            <div class="p-4 border-b border-slate-100 flex justify-between items-center">
+                <span class="font-semibold text-slate-800">Developer Sandbox</span>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+            <div class="p-4 flex justify-between items-center">
+                <span class="font-semibold text-slate-800">Documentation Portal</span>
+                <span class="text-emerald-500 font-bold text-sm">Operational</span>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center text-sm text-slate-400">
+            Subscribe to status updates: <a href="mailto:status@omnisyncdata.com" class="text-blue-600 hover:underline">status@omnisyncdata.com</a>
+        </div>
+    </section>
+</body>
+</html>

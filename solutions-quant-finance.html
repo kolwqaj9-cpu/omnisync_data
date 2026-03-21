@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantitative Finance Data | OmniSync Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-2xl font-extrabold text-slate-800 tracking-tight"><a href="index.html">OmniSync<span class="text-blue-600">Data</span></a></div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="data-catalog.html" class="hover:text-blue-600 transition">Data Catalog</a>
+            <a href="financial-data.html" class="hover:text-blue-600 transition">Financial Data</a>
+            <a href="sports-analytics.html" class="hover:text-blue-600 transition">Sports Analytics</a>
+            <a href="contact.html" class="bg-slate-900 text-white px-5 py-2.5 rounded-md hover:bg-slate-800 transition">Contact Sales</a>
+        </div>
+    </nav>
+
+    <header class="bg-slate-900 text-white py-24 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-sm font-bold text-yellow-400 uppercase tracking-widest mb-4">Solution: Quantitative Finance</div>
+            <h1 class="text-5xl font-extrabold mb-6">Alpha Starts with Better Data</h1>
+            <p class="text-xl text-slate-400 max-w-3xl">Institutional quant desks and prop trading firms use OmniSync's alternative data feeds to surface non-consensus signals before they're reflected in market prices.</p>
+        </div>
+    </header>
+
+    <section class="max-w-5xl mx-auto py-16 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <div class="text-yellow-500 text-2xl mb-3">📊</div>
+                <h3 class="font-bold text-xl mb-3">Clinical Trial Catalysts</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Phase 2/3 trial initiations and readout calendars extracted in real time. Historically correlated with 8–35% single-day moves in small-cap biotech.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <div class="text-yellow-500 text-2xl mb-3">📈</div>
+                <h3 class="font-bold text-xl mb-3">Hiring Velocity Signals</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Aggregate job posting data by company, function, and geography. Hiring surges in engineering and ops are leading indicators of revenue acceleration.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <div class="text-yellow-500 text-2xl mb-3">⚡</div>
+                <h3 class="font-bold text-xl mb-3">Sports Prop Arbitrage</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Physics-derived probability shifts delivered before line adjustments. Sub-50ms API enables systematic prop betting models and live market-making.</p>
+            </div>
+        </div>
+
+        <div class="bg-slate-900 text-white p-10 rounded-xl mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">Backtesting Infrastructure</h2>
+                    <p class="text-slate-400 leading-relaxed mb-6">Access 10+ years of historical signals through our Snowflake-native data sharing. Run backtests directly in your warehouse — no ETL, no data movement, no infrastructure overhead.</p>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li>✓ Point-in-time correct historical data</li>
+                        <li>✓ No survivorship bias in B2B datasets</li>
+                        <li>✓ Tick-level sports telemetry since 2015</li>
+                        <li>✓ Clinical trial data back to 2008</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg">
+                    <div class="text-slate-400 text-xs mb-3 font-mono uppercase tracking-widest">Python SDK Example</div>
+                    <pre class="text-sm font-mono text-emerald-400"><code>import omnisync
+
+client = omnisync.Client(
+    api_key="os_live_KEY"
+)
+
+signals = client.finance.signals.list(
+    signal_type="clinical_catalyst",
+    start_date="2024-01-01",
+    ticker="MRNA"
+)
+
+for s in signals.data:
+    print(s.direction, s.confidence)</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h2 class="text-2xl font-bold mb-4">Talk to a Quant Data Specialist</h2>
+            <p class="text-slate-600 mb-8">We'll walk you through the signal catalog, backtest depth, and custom pipeline options relevant to your strategy.</p>
+            <a href="contact.html" class="bg-blue-600 text-white px-10 py-4 rounded font-bold hover:bg-blue-700 transition inline-block">Request a Quant Briefing</a>
+        </div>
+    </section>
+</body>
+</html>
