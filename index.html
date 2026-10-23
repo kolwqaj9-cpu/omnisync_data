@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmniSync Data | Institutional Grade Data Feeds</title>
+    <title>OmniSync Data | Market-gap data for professional firms</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
     <nav class="p-6 bg-white border-b border-slate-200 flex justify-between items-center sticky top-0 z-50">
         <div class="text-2xl font-extrabold text-slate-800 tracking-tight">OmniSync<span class="text-blue-600">Data</span></div>
         <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+            <a href="legal.html" class="hover:text-blue-600 transition">For Legal</a>
             <a href="data-catalog.html" class="hover:text-blue-600 transition">Data Catalog</a>
             <a href="api-docs.html" class="hover:text-blue-600 transition">API & Docs</a>
             <a href="data-provenance.html" class="hover:text-blue-600 transition">Compliance</a>
@@ -22,55 +23,43 @@
 
     <header class="max-w-6xl mx-auto text-center py-32 px-4">
         <h1 class="text-6xl font-extrabold tracking-tight mb-8 text-slate-900 leading-tight">
-            High-Fidelity Data Fuel for <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Machine Learning & Quants</span>
+            Data on how professional firms get found<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">and where the call is lost</span>
         </h1>
         <p class="text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            We deliver structured, ethically sourced data pipelines across healthcare, sports analytics, and B2B firmographics. Engineered for zero downtime and seamless integration into your models.
+            We read a firm's public pages the way two readers do &mdash; the search engine that decides whether the page is worth showing, and the client deciding whether to pick up the phone. Then we report the gap in numbers. Legal, HVAC distribution, clinical research.
         </p>
         <div class="flex justify-center space-x-4">
-            <a href="data-catalog.html" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-700 transition shadow-lg">Explore Datasets</a>
-            <a href="api-docs.html" class="bg-white text-slate-800 border border-slate-300 px-8 py-4 rounded-md font-bold hover:bg-slate-50 transition">View API Documentation</a>
+            <a href="legal.html" class="bg-blue-600 text-white px-8 py-4 rounded-md font-bold hover:bg-blue-700 transition shadow-lg">See a legal audit</a>
+            <a href="data-catalog.html" class="bg-white text-slate-800 border border-slate-300 px-8 py-4 rounded-md font-bold hover:bg-slate-50 transition">What we measure</a>
         </div>
     </header>
 
-    <section class="border-t border-slate-200 bg-white py-20">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Trusted by Quantitative Researchers & AI Engineers</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60 grayscale">
-                <div class="text-2xl font-bold font-serif">AuraTech Labs</div>
-                <div class="text-2xl font-bold font-serif">Crest Quant</div>
-                <div class="text-2xl font-bold font-serif">Nexus Health AI</div>
-                <div class="text-2xl font-bold font-serif">Vanguard Prop</div>
-            </div>
-        </div>
-    </section>
-
     <section class="max-w-6xl mx-auto py-24 px-4">
-        <h2 class="text-3xl font-extrabold text-center mb-16 text-slate-900">Why Institutional Buyers Choose OmniSync</h2>
+        <h2 class="text-3xl font-extrabold text-center mb-16 text-slate-900">What we measure</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="text-center">
-                <div class="text-5xl font-extrabold text-blue-600 mb-3">99.998%</div>
-                <div class="font-bold text-slate-800 text-lg mb-2">Uptime SLA</div>
-                <p class="text-slate-500 text-sm">Mission-critical pipelines demand zero downtime. Our distributed infrastructure delivers.</p>
+                <div class="text-5xl font-extrabold text-blue-600 mb-3">Title</div>
+                <div class="font-bold text-slate-800 text-lg mb-2">The line that gets shown</div>
+                <p class="text-slate-500 text-sm">If a page has no usable title, the search result shows the firm's name and nothing else. We report what is actually shown, page by page.</p>
             </div>
             <div class="text-center">
-                <div class="text-5xl font-extrabold text-blue-600 mb-3">&lt;50ms</div>
-                <div class="font-bold text-slate-800 text-lg mb-2">API Latency</div>
-                <p class="text-slate-500 text-sm">Real-time sports telemetry and B2B enrichment APIs with sub-50ms response guarantees.</p>
+                <div class="text-5xl font-extrabold text-blue-600 mb-3">Description</div>
+                <div class="font-bold text-slate-800 text-lg mb-2">The line written for you</div>
+                <p class="text-slate-500 text-sm">No description on the page means someone else writes it. We list every page where that happens, and what it currently says instead.</p>
             </div>
             <div class="text-center">
-                <div class="text-5xl font-extrabold text-blue-600 mb-3">200M+</div>
-                <div class="font-bold text-slate-800 text-lg mb-2">Verified Profiles</div>
-                <p class="text-slate-500 text-sm">Continuously updated B2B contact graph with SMTP-validated email deliverability.</p>
+                <div class="text-5xl font-extrabold text-blue-600 mb-3">Structure</div>
+                <div class="font-bold text-slate-800 text-lg mb-2">Whether a machine can tell</div>
+                <p class="text-slate-500 text-sm">Names, practice areas, locations, phone numbers &mdash; we check whether they are marked up, or only readable by a human.</p>
             </div>
         </div>
     </section>
 
     <section class="bg-slate-900 text-white py-20 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-extrabold mb-6">Ready to Integrate?</h2>
-            <p class="text-slate-400 mb-10 text-lg">Talk to our data engineers. We'll architect a custom pipeline tailored to your model requirements.</p>
-            <a href="contact.html" class="bg-blue-600 text-white px-10 py-4 rounded-md font-bold hover:bg-blue-500 transition text-lg">Request Technical Consultation</a>
+            <h2 class="text-3xl font-extrabold mb-6">Send us one URL</h2>
+            <p class="text-slate-400 mb-10 text-lg">We come back with the gap in numbers &mdash; per page, no charge, no signup. If nothing is wrong, that is also an answer.</p>
+            <a href="mailto:tony@omnisyncdata.com?subject=One%20URL" class="bg-blue-600 text-white px-10 py-4 rounded-md font-bold hover:bg-blue-500 transition text-lg">tony@omnisyncdata.com</a>
         </div>
     </section>
 
